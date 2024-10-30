@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modmaster - Modmenu para Roblox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho com navegação fixa -->
+    <header class="header">
+        <h1>Modmaster</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#modo-uso">Modo de Uso</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="theme-toggle" onclick="toggleTheme()">🌞</div>
+    </header>
+    
+    <!-- Tela de introdução -->
+    <section class="intro">
+        <div class="intro-image">
+            <img src="logo hack.png" alt="Logo do Modmaster" class="imgcub">
+        </div>
+        <div class="intro-text">
+            <h1>Bem-vindo ao Modmaster</h1>
+            <p>O modmenu feito em Lua para Roblox que permite a execução de ferramentas e scripts personalizados.</p>
+        </div>
+    </section>
+    
+    <!-- Seção Sobre -->
+    <section id="sobre">
+        <h1>Sobre o Modmaster</h1>
+        <p>Modmaster é um modmenu desenvolvido por mim em Lua, permitindo a execução de ferramentas e modificações via links externos.</p>
+    </section>
+    
+    <!-- Seção Modo de Uso -->
+   <!-- Seção Modo de Uso -->
+<section id="modo-uso">
+    <h1>Modo de Uso</h1>
+    <div class="projeto">
+        <h3>Passo 1: Baixar um Executor de Script</h3>
+        <p>Para começar, baixe um executor de script que permita a utilização do Modmaster em Roblox. Recomendamos o <strong>Delta Executor</strong> pela segurança e eficiência que oferece.</p>
+       <img style="max-width: 400px; max-height: 200px;" src="inicio delta.png" alt="">
+        <a href="https://delta-executor.com/" target="_blank">Saiba mais sobre o Delta Executor</a>
+    <h1>Vai de sua escolha!</h1>
+    </div>
+
+    <div class="projeto">
+        <h3>Passo 2: Obter a Chave de Ativação</h3>
+        <p>Para usar o Modmaster, é necessária uma chave de ativação. Siga as etapas abaixo para obtê-la:</p>
+        <ol>
+            <li>Inicie qualquer jogo no Roblox com o Delta Executor fechado. Em seguida, copie o link de ativação fornecido.</li>
+            <img style="max-width: 400px; max-height: 200px;" src="pegar link.jpg" alt="">
+            <li>Abra uma nova guia anônima em seu navegador e cole o link de ativação. Você verá um quadro com um botão "Continuar"; clique nele para prosseguir.</li>
+            <img style="max-width: 400px; max-height: 200px;" src="Continuar.jpeg" alt=""> 
+            <li>Quando um novo quadro com a imagem do Delta aparecer, assista aos anúncios exibidos. Após concluí-los, volte à guia para continuar e acessar o link de ativação da chave.</li>
+            <li>Note que a chave gerada possui um limite de uso de 24 horas, sendo necessário renová-la após esse período.</li>
+        </ol>
+    </div>
+    
+
+    <div class="projeto">
+        <h3>Passo 3: Inserir a Chave no Executor</h3>
+        <p>Abra o <strong>Delta Executor</strong> ou o executor de sua escolha e siga estas etapas:</p>
+        <ol>
+            <li>Abra o executor e vá para a seção de ativação.</li>
+            <li>Insira a chave de ativação no campo indicado.</li>
+            <img style="max-width: 400px; max-height: 200px;" src="delta.jpg" alt="">
+            
+        </ol>
+    </div>
+
+    <!-- Passo 4: Usando o Modmaster -->
+    <div class="projeto">
+        <h3>Passo 4: Usando o Modmaster</h3>
+        <p>A ativação do Modmaster ocorre a partir de um link externo. Siga estas etapas para utilizá-lo:</p>
+        <ul>
+            <li>Abra o Roblox e inicie o jogo onde deseja usar o Modmaster.</li>
+            <li>No executor, acesse o console de scripts.</li>
+            <li>Insira o seguinte código para carregar o menu de mods no jogo:</li>
+            
+            <img style="max-width: 400px; max-height: 200px; display: block; margin: auto;" src="delta com o link.jpeg" alt="Modmaster ativado no jogo">
+            
+            <pre id="code-to-copy">
+                <code>loadstring(game:HttpGet("https://raw.githubusercontent.com/AdrainRazini/mastermod/refs/heads/main/mastermod.lua"))()</code>
+            </pre>
+            
+            <button onclick="copyCode()">Copiar Código</button>
+            
+            <li>Assim que ativado, o menu Modmaster estará disponível com todas as ferramentas e personalizações configuradas.</li>
+        </ul>
+        <h1>Execute</h1>
+        <p>Explore o menu com responsabilidade, respeitando as diretrizes da plataforma para uma experiência segura.</p>
+        
+        <img style="max-width: 400px; max-height: 200px; display: block; margin: auto;" src="mastermod ativo.jpeg" alt="Modmaster ativado no jogo">
+    </div>
+    
+    <script>
+        function copyCode() {
+            const code = document.getElementById('code-to-copy').innerText;
+            navigator.clipboard.writeText(code).then(() => {
+                alert('Código copiado para a área de transferência!');
+            }).catch(err => {
+                console.error('Erro ao copiar o código: ', err);
+            });
+        }
+    </script>
+    
+
+</section>
+
+    
+    <!-- Seção Contato (com formulário) -->
+    <section id="contato">
+        
+     
+    </section>
+    
+    <!-- Rodapé -->
+    <footer>
+        <p>Contate-nos: <a href="mailto:contato@exemplo.com">contato@exemplo.com</a></p>
+    </footer>
+
+    <!-- Script para alternar o tema -->
+    <script>
+        function toggleTheme() {
+            document.body.dataset.theme = 
+                document.body.dataset.theme === "dark" ? "light" : "dark";
+        }
+    </script>
+</body>
+</html>
